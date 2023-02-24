@@ -4,17 +4,15 @@
 // - va applicato uno sconto del 20 % per i minorenni
 // - va applicato uno sconto del 40 % per gli over 65
 
-const body = document.querySelector('body');
-body.style.backgroundColor = 'aqua';
+const containerEl = document.getElementById('main-container');
+containerEl.style.backgroundColor = 'aqua';
 
 
-const container = document.getElementById('container');
-container.style.margin = 'auto';
-container.style.maxWidth = '1000px';
-container.style.display = 'flex';
-container.style.justifyContent = 'space-between';
-
-
+const innerContainerEl = document.getElementById('inner-container');
+// innerContainerEl.style.backgroundColor = 'coral';
+// innerContainerEl.style.display = 'flex';
+// innerContainerEl.style.justifyContent = 'space-between';
+// innerContainerEl.style.alignItems = 'center';
 
 
 let userAgeEl = document.getElementById("userAge");

@@ -5,21 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Biglietto del treno_improved</title>
+
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <main id="container">
+    <main id="main-container">
+        <h1>Acquista il tuo biglietto</h1>
         <div class="inner-container">
-            <label for="userAge">Seleziona la tua età</label>
-            <select name="userAge" id="userAge" autocomplete="off" required>
-                <option selected disabled> -- Scegli la tua età -- </option>
-                <option value="minors">Minorenne (< 18 anni)</option>
-                <option value="adults">Adulto</option>
-                <option value="seniors">Senior + 65</option>
-            </select>
+            <div class="inputs-line">
+                <div>
+                    <label for="userAge">Seleziona la tua età</label>
+                    <select name="userAge" id="userAge" autocomplete="off" required>
+                        <option selected disabled> -- Scegli la tua età -- </option>
+                        <option value="minors">Minorenne (< 18 anni)</option>
+                        <option value="adults">Adulto</option>
+                        <option value="seniors">Senior + 65</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="userKm">Digita i chilometri che vuoi percorrere</label>
+                    <input type="text" id="userKm" autocomplete="off">
+                </div>
+            </div>
+
+            <div class="ticket-container">
+
+            </div>
         </div>
         <div class="inner-container">
-            <label for="userKm">Digita i chilometri che vuoi percorrere</label>
-            <input type="text" id="userKm" autocomplete="off">
         </div>
         <div class="inner-container">
             <button id="userButton">Conferma</button>
