@@ -10,37 +10,47 @@
 </head>
 <body>
     <main id="main-container">
-        <h1>Acquista il tuo biglietto</h1>
         <div class="inner-container">
-            <div class="inputs-line">
-                <div>
-                    <label for="userAge">Seleziona la tua età</label>
-                    <select name="userAge" id="userAge" autocomplete="off" required>
-                        <option selected disabled> -- Scegli la tua età -- </option>
-                        <option value="minors">Minorenne (< 18 anni)</option>
-                        <option value="adults">Adulto</option>
-                        <option value="seniors">Senior + 65</option>
-                    </select>
+            <h2>Acquista il tuo biglietto</h2>
+            <div class="input-form">
+                <div class="inputs-line">
+                    <div>
+                        <label for="userName">Inserisci il nome del passeggero</label>
+                        <input type="text" id="userName" autocomplete="off">
+                    </div>
+                    <div>
+                        <label for="userAge">Seleziona l'età</label>
+                        <select name="userAge" id="userAge" autocomplete="off" required>
+                            <option selected disabled> -- Scegli la tua età -- </option>
+                            <option value="minors">Minorenne (< 18 anni)</option>
+                            <option value="adults">Adulto</option>
+                            <option value="seniors">Senior + 65</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="userKm">Digita i chilometri da percorrere</label>
+                        <input type="text" id="userKm" autocomplete="off">
+                    </div>
                 </div>
-                <div>
-                    <label for="userKm">Digita i chilometri che vuoi percorrere</label>
-                    <input type="text" id="userKm" autocomplete="off">
+                <div class="buttons-line">
+                    <button id="userButton">Conferma</button>
+                    <button id="userCancel">Annulla</button>
+    
                 </div>
             </div>
-
-            <div class="ticket-container">
-
+            <div id="ticket-container">
+                <h2>Il tuo biglietto</h2>
+                <div class="ticket-card">
+                    <div class="ticket-user-name"></div>
+                    <div class="ticket-discount"></div>
+                    <div class="ticket-coach"></div>
+                    <div class="ticket-code"></div>
+                    <div class="ticket-price"></div>
+                </div>
+    
             </div>
         </div>
-        <div class="inner-container">
-        </div>
-        <div class="inner-container">
-            <button id="userButton">Conferma</button>
-        </div>
-        <div class="inner-container">
-            <button id="userCancel">Annulla</button>
-        </div>
-
+        
     </main>
     
 

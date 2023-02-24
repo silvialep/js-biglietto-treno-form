@@ -8,10 +8,58 @@ body {
     font-family: sans-serif;
 }
 
-#inner-container {
+h2 {
+    text-align: center;
+    padding: 50px;
+}
+
+.inner-container {
+    gap: 50px;
     max-width: 1000px;
     max-height: 1000px;
     margin: auto;
-    padding: 100px;
+    padding-bottom: 50px;
     background-color: coral;
+    color: maroon;
 }
+
+.input-form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 800px;
+    margin: auto;
+    padding: 30px 0;
+    background-color: white;
+}
+
+.inputs-line {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.buttons-line {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+#ticket-container {
+    display: none;
+}
+
+.ticket-card {
+    display: flex;
+    gap: 20px;
+    max-height: 400px;
+    background-color: white;
+}
+/* 
+.ticket-user-name {
+
+}
+.ticket-discount
+.ticket-coach
+.ticket-code
+.ticket-price */
