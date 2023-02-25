@@ -34,19 +34,23 @@ let userCancelEl = document.getElementById('userCancel');
 userButtonEl.addEventListener('click', function() {
     let basicPrice = (parseFloat(userKmEl.value) * pricePerKm).toFixed(2);
     let finalPrice;
+    let discount;
 
     
     if(userAgeEl.value == 'minors') {
+        discount = 'Sconto del 20% - tariffa minors';
         console.log(`L'utente ha diritto ad uno sconto del 20%.`);
         console.log(`Il prezzo pieno è di ${basicPrice} €.`)
         console.log(`Il prezzo scontato è di ${finalPrice = (basicPrice - (basicPrice / 100 * 20)).toFixed(2)} €.`);
         
         
     } else if(userAgeEl.value == 'seniors') {
+        discount = 'Sconto del 40% - tariffa seniors';
         console.log(`L'utente ha diritto ad uno sconto del 40%.`);
         console.log(`Il prezzo pieno è di ${basicPrice} €.`)
         console.log(`Il prezzo scontato è di ${(finalPrice = basicPrice - (basicPrice / 100 * 40)).toFixed(2)} €.`);
     } else {
+        discount = 'Biglietto standard';
         console.log(`Il costo del biglietto è a prezzo pieno.`)
         console.log(`Il prezzo pieno è di ${finalPrice = basicPrice} €.`)
         
@@ -59,6 +63,9 @@ userButtonEl.addEventListener('click', function() {
     let userTicketNameEl = document.querySelector('.user-name');
     userTicketNameEl.innerHTML = userNameEl.value;
 
+    let userTicketDiscount = document.querySelector('.user-discount');
+    userTicketDiscount.innerHTML = discount;
+
     let userTicketCoachEl = document.querySelector('.user-coach');
     userTicketCoachEl.innerHTML = `Carrozza numero: ${Math.floor(Math.random() * 15)}`;
 
@@ -69,7 +76,7 @@ userButtonEl.addEventListener('click', function() {
     userTicketCodeEL.innerHTML = Math.floor(Math.random() * 10000);
 
     let userTicketFinalPriceEl = document.querySelector('.final-ticket-price');
-    userTicketFinalPriceEl.innerHTML = finalPrice;
+    userTicketFinalPriceEl.innerHTML = (parseFloat(finalPrice)).toFixed(2) + " €";
 
     userAgeEl.value = '';
     userKmEl.value = '';
