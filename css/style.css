@@ -52,14 +52,14 @@ h2 {
 .ticket-card {
     display: flex;
     gap: 20px;
-    max-height: 400px;
+    max-width: 800px;
+    height: auto;
+    margin: auto;
     background-color: white;
 }
-/* 
-.ticket-user-name {
 
+.ticket-inner {
+    width: calc(100% / 5);
+    height: 200px;
+    background-color: white;
 }
-.ticket-discount
-.ticket-coach
-.ticket-code
-.ticket-price */
