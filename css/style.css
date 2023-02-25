@@ -6,6 +6,7 @@
 
 body {
     font-family: sans-serif;
+    background-color: brown;
 }
 
 h2 {
@@ -13,11 +14,12 @@ h2 {
     padding: 50px;
 }
 
+
 .inner-container {
     gap: 50px;
     max-width: 1000px;
     max-height: 1000px;
-    margin: auto;
+    margin: 50px auto;
     padding-bottom: 50px;
     background-color: coral;
     color: maroon;
@@ -51,15 +53,32 @@ h2 {
 
 .ticket-card {
     display: flex;
-    gap: 20px;
+    flex-direction: column;
     max-width: 800px;
-    height: auto;
+    height: 200px;
     margin: auto;
+    padding: 10px;
     background-color: white;
+    font-size: 0.9rem;
 }
 
-.ticket-inner {
-    width: calc(100% / 5);
-    height: 200px;
-    background-color: white;
+.title-line, .content-line {
+    display: flex;
+    width: 100%;
+    gap: 5px;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.title-line h3 {
+    width: calc(100% / 5 - (10px / 4));
+}
+
+.content-line {
+    height: 100%;
+    align-items: center;
+}
+
+.content-line .ticket-inner {
+    width: calc(100% / 5 - (10px / 4));
 }

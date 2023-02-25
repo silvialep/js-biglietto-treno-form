@@ -4,9 +4,6 @@
 // - va applicato uno sconto del 20 % per i minorenni
 // - va applicato uno sconto del 40 % per gli over 65
 
-let containerEl = document.getElementById('main-container');
-containerEl.style.backgroundColor = 'brown';
-containerEl.style.height = '1000px';
 
 
 let userNameEl = document.getElementById('userName');
@@ -35,7 +32,7 @@ let userCancelEl = document.getElementById('userCancel');
 
 
 userButtonEl.addEventListener('click', function() {
-    let basicPrice = (parseFloat(userKm.value) * pricePerKm).toFixed(2);
+    let basicPrice = (parseFloat(userKmEl.value) * pricePerKm).toFixed(2);
     let finalPrice;
 
     
@@ -62,13 +59,20 @@ userButtonEl.addEventListener('click', function() {
     let userTicketNameEl = document.querySelector('.user-name');
     userTicketNameEl.innerHTML = userNameEl.value;
 
+    let userTicketCoachEl = document.querySelector('.user-coach');
+    userTicketCoachEl.innerHTML = `Carrozza numero: ${Math.floor(Math.random() * 15)}`;
+
+    let userTicketSeatEl = document.querySelector('.user-seat');
+    userTicketSeatEl.innerHTML = `Posto numero: ${Math.floor(Math.random() * 100)}`;
+
+    let userTicketCodeEL = document.querySelector('.user-code');
+    userTicketCodeEL.innerHTML = Math.floor(Math.random() * 10000);
+
     let userTicketFinalPriceEl = document.querySelector('.final-ticket-price');
     userTicketFinalPriceEl.innerHTML = finalPrice;
 
-        
-    // ticketUserNameEl.innerHtml = userNameEl.value;
-    // userAgeEl.value = '';
-    // userKmEl.value = '';
+    userAgeEl.value = '';
+    userKmEl.value = '';
     
 });
 
